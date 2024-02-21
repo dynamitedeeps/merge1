@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+
+
+input[type="text"]:focus ~ .input-text,
+input[type="text"]:not(:placeholder-shown) ~ .input-text{
+  @apply text-blue-500 transform -translate-y-10 -translate-x-2 scale-75;
+}
+
+* {
+  @apply p-0 m-0;
+}
+.common-input {
+  @apply border-2 !border-[#00000095] placeholder:text-[#00000080] placeholder:font-semibold !outline-none !rounded-md !text-[18px] !px-3 !py-1 w-full
+}
+.common-textarea {
+  @apply border-2 !border-[#00000095] placeholder:text-[#00000080]  placeholder:font-semibold outline-none rounded resize-none text-[18px] p-3 w-full
+}
+.common-select {
+  @apply border-2 !border-[#00000095] placeholder:text-[#00000080]  placeholder:font-semibold  !outline-none !rounded-md  !text-[18px] p-3 !px-3 !py-1 w-full
+}
+
+/* new class created as i not want to affect previous styling*/
+
+.secondary-select {
+  @apply border-2 !border-[#00000095] placeholder:text-[#00000080]  placeholder:font-semibold  outline-none rounded resize-none text-[18px] p-2
+}
+
+/* .common-input {
+  @apply !border-2 !border-[#00000095] placeholder:text-[#00000080] placeholder:font-semibold !outline-none !rounded-md !text-[18px] !px-3 !py-1 
+} */
+
+.model-input {
+  @apply  placeholder:text-[black] border-black border-2 w-full py-2 px-4 text-lg outline-none rounded-2xl
+}
+
+
+@layer utilities {
+  .min-h-vh-143 {
+    min-height: calc(100vh - 143px);
+  }
+
+  @media (max-width: 500px) {
+    .min-h-vh-143 {
+      min-height: calc(100vh - 108px);
+    }
+  }
+}
+
+
+
+
+
+
+.special-label{
+  display: none !important;
+}
